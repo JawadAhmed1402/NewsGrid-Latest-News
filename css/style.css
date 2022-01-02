@@ -1,0 +1,177 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    text-decoration: none;
+    border: 0;
+}
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5;
+} 
+nav {
+    background-color: white;
+    width: 100%;
+    height: 77px;
+    position: sticky;
+}
+#NAV-LOGO {
+    display: flex;
+    justify-self: flex-start;
+    width: 180px;
+}
+#NAV-DIV-1{
+    padding: 16px;
+    margin: 0 90px;
+    display: grid;
+    grid-template-columns: 6fr 3fr 2fr ;
+}
+#SOCIAL{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#SOCIAL i{
+    color: #777;
+    margin-right: 0.6rem;
+}
+.fab{
+    font-family: "Font Awesome 5 Brands";
+}
+.fa-2x{
+    font-size: 2em;
+}
+ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+ul li{
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+ul li a{
+    padding: 0.75rem;
+    font-weight: bold;
+    color: #333;
+}
+ul li a#CURRENT{
+    background: #C72727;
+    color: white;
+}
+.nav-a:hover{
+    background-color: rgb(235, 235, 235);
+}
+#CURRENT:hover{
+    background: rgb(235, 235, 235);
+    color: #333;
+}
+
+@media screen and (max-width:768px) {
+    nav{
+        height: 117px;
+    }
+    ul li a{
+        padding: 8px;
+    }
+    #NAV-DIV-1{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1.4rem;
+        padding: 1rem;
+    }
+    #NAV-LOGO{
+        margin: auto;
+    }
+    ul{
+        margin: auto;
+    }
+    #SOCIAL{
+        display: none;
+    }
+}
+/* SHOW-CASE */
+#SHOWCASE::before{
+    content: '';
+    /* display: block; */
+    background: url(../assets/Images/featured.jpg) no-repeat center center/cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    position: absolute;
+}
+#SHOWCASE{
+    color: #fff;
+    background: #333;
+    padding: 2rem;
+    position: relative;
+    display: grid;
+}
+.container{
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+#SHOWCASE-CONTAINER{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+#SHOWCASE-CONTENT{
+    z-index: 1;
+}
+.category{
+    display: inline-block;
+    color: #fff;
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    padding: 0.4rem 0.6rem;
+    border-radius: 15px;
+    margin-bottom: 0.5rem;
+}
+.category-sports{
+    background: #f99500;
+    margin: 0 0 8px;
+    padding: 6.4px 9.6px;
+}
+h1,h2, h3, h4, h5, h6{
+    font-family: 'Staatliches', cursive;
+    margin-bottom: 0.55rem;
+    line-height: 1.3;
+}
+h1{
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0 0 8.8px; 
+}
+p{
+    display: block;
+    line-height: 1.5;
+    margin: 8px 0 16px;
+}
+.btn{
+    display: inline-block;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+}
+.btn-primary{
+    color: #fff;
+    background: #C72727;
+    padding: 8px 24px;
+    font-size: 16px;
+}
+.btn-primary:hover{
+    background: #a52727;
+}
+@media screen and (max-width:600px){
+    #SHOWCASE-CONTAINER{
+        grid-template-columns: 1fr;
+    }
+}
