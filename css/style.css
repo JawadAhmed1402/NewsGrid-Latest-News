@@ -41,23 +41,24 @@ nav {
 .fa-2x{
     font-size: 2em;
 }
-ul{
+#LIST{
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     
 }
-ul li{
+#LIST li{
     display: list-item;
     text-align: -webkit-match-parent;
+    border-bottom: none;
 }
-ul li a{
+#LIST li a{
     padding: 0.75rem;
     font-weight: bold;
     color: #333;
 }
-ul li a#CURRENT{
+#LIST li a#CURRENT{
     background: #C72727;
     color: white;
 }
@@ -73,7 +74,7 @@ ul li a#CURRENT{
     nav{
         height: 117px;
     }
-    ul li a{
+    #LIST li a{
         padding: 8px;
     }
     #NAV-DIV-1{
@@ -85,7 +86,7 @@ ul li a#CURRENT{
     #NAV-LOGO{
         margin: auto;
     }
-    ul{
+    #LIST{
         margin: auto;
     }
     #SOCIAL{
@@ -95,7 +96,6 @@ ul li a#CURRENT{
 /* SHOW-CASE */
 #SHOWCASE::before{
     content: '';
-    /* display: block; */
     background: url(../assets/Images/featured.jpg) no-repeat center center/cover;
     top: 0;
     left: 0;
@@ -177,8 +177,6 @@ p{
     }
 }
 /* Home */
-#HOME-ARTICLE{
-}
 .py-2{
     padding: 2rem 0;
 }
@@ -237,9 +235,64 @@ a{
     #ARTICLE-CONTAINER{
         grid-template-columns: repeat(2, 1fr);
     }
+    #ARTICLE-CONTAINER >*:first-child, #ARTICLE-CONTAINER >*:last-child{
+        grid-template-columns: 1fr;
+        grid-column: 1 / 2;
+    }
+    #ARTICLE-CONTAINER>*:last-child{
+        grid-column: 1 / 2;
+    }
+}
+@media (max-width:600px){
+    #ARTICLE-CONTAINER{
+        grid-template-columns: 1fr;
+    }
+}
+/* Footer */
+#MAIN-FOOTER{
+    background: #333;
+    color: #fff;
+}
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.5rem;
+}
+#MAIN-FOOTER img{
+    width: 150px;
+}
+input[type='email']{
+    width: 90%;
+    padding: 0.5rem 0;
+    margin-bottom: 0.5rem;
+}
+input[type='submit']{
+    width: 90%;
+}
+ul{
+    list-style: none;
+}
+ul li{
+    padding: 8px 0;
+    border-bottom: #444 dotted 2px;
+}
+ul li a{
+    color: #fff; 
+}
+ul li a:hover{
+    color: #C72727;
+}
+.btn-secondary{
+    background: #f99500;
+}
+.footer-container>*:last-child{
+    grid-column: 1 / -1;
+    text-align: center;
+    background: #444;
+    padding: 8px;
 }
 @media screen and (max-width:600px){
-    #ARTICLE-CONTAINER{
+    .footer-container{
         grid-template-columns: 1fr;
     }
 }
