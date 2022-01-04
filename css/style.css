@@ -233,3 +233,13 @@ a{
 #ARTICLE-CONTAINER >*:last-child{
     grid-column: 2 / span 2;
 }
+@media screen and (max-width:768px){
+    #ARTICLE-CONTAINER{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width:600px){
+    #ARTICLE-CONTAINER{
+        grid-template-columns: 1fr;
+    }
+}
